@@ -6,11 +6,13 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+
+  goHome() {
+    this.router.navigate(['/home']);
   }
 
 }
